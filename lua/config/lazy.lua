@@ -14,8 +14,10 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local minimal = vim.env.NVIM_MINIMAL == "1"
+
 require("lazy").setup({
-  spec = {
+  spec = minimal and {} or {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins

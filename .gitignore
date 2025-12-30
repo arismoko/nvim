@@ -7,3 +7,4 @@ foo.*
 *.log
 data
 lua/plugins/copilot-chat-dev.lua
+lua/plugins/omarchy-theme-hotreload.lua
