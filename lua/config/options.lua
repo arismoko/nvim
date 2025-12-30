@@ -4,6 +4,9 @@
 vim.opt.relativenumber = false
 vim.opt.conceallevel = 2
 
+-- Use simple borders to avoid cursor misalignment in floating windows
+vim.g.border = "single"
+
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
